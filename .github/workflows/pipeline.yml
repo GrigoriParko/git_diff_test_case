@@ -19,7 +19,7 @@ jobs:
         id: git-diff
         with:
           PATTERNS: |
-            **${{ matrix.package }}**
+            ${{ matrix.package }}/**
       - name: Output
         run: echo "Package has changed"
         if: env.GIT_DIFF
