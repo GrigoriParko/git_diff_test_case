@@ -1,0 +1,25 @@
+name: git-diff-test
+
+on: [push]
+
+jobs:
+  test-run:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        package: [
+          'destination',
+          'initial'
+        ]
+    steps:
+      - name: Make code accesible
+        uses: actions/checkout@v2
+      - name: GIT DIFF
+        uses: technote-space/get-diff-action@v4
+        id: git-diff
+        with:
+          PATTERNS: |
+            **{{ matrix.package }}**
+      - name: Output
+        run: echo "Package has changed"
+        if: env.GIT_DIFF
