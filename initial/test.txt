@@ -1,0 +1,1 @@
+GIT DIFF move file test
