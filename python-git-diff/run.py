@@ -2,8 +2,10 @@ import os
 import subprocess
 
 
+head_ref = os.getenv("HEAD_REF", "master")
+
 if __name__ == "__main__":
     subprocess.run(
-        "git diff --name-only origin/${GITHUB_HEAD_REF}",
+        f"git diff --name-only origin/${head_ref}",
         shell=True
     )
