@@ -10,6 +10,9 @@ inputs:
   PATTERNS:
     description: Target file pattern.
     required: false
+  HEAD_REF:
+    description: Github head ref
+    required: true
 
 outputs:
   diff:
@@ -20,3 +23,4 @@ runs:
   image: Dockerfile
   env:
     PATTERNS: ${{ inputs.PATTERNS }}
+    HEAD_REF: ${{ inputs.HEAD_REF }}
