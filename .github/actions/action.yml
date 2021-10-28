@@ -1,0 +1,25 @@
+name: Git Diff
+
+description: GitHub action to get git diff
+
+inputs:
+  GITHUB_TOKEN:
+    description: Secret GitHub API token to make API requests.
+    default: ${{ github.token }}
+    required: true
+  PATTERNS:
+    description: Target file pattern.
+    required: false
+
+outputs:
+  diff:
+    description: The results of diff file names.
+
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    PATTERNS: ${{ inputs.PATTERNS }}
+    BASE: ${{ github.base_ref }}
+    HEAD: ${{ github.head_ref }}
+    PPDS_PY_DIR: ${{ github.workspace }}

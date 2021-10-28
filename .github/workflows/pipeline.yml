@@ -1,6 +1,6 @@
 name: git-diff-test
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test-run:
