@@ -15,7 +15,7 @@ jobs:
       - name: Make code accesible
         uses: actions/checkout@v2
       - name: GIT DIFF
-        uses: technote-space/get-diff-action@v4
+        uses: actions/action
         id: git-diff
         with:
           PATTERNS: |
