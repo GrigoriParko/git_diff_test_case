@@ -20,7 +20,6 @@ jobs:
         with:
           PATTERNS: |
             ${{ matrix.package }}/**
-          HEAD: ${{ github.head_ref }}
       - name: Output
         run: echo "Package has changed"
         if: env.GIT_DIFF

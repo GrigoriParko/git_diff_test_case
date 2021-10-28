@@ -20,4 +20,3 @@ runs:
   image: Dockerfile
   env:
     PATTERNS: ${{ inputs.PATTERNS }}
-    HEAD: ${{ inputs.head_ref }}
