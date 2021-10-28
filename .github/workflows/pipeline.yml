@@ -15,7 +15,7 @@ jobs:
       - name: Make code accesible
         uses: actions/checkout@v2
       - name: GIT DIFF
-        uses: actions/python-git-diff
+        uses: ./python-git-diff
         id: git-diff
         with:
           PATTERNS: |
