@@ -15,7 +15,7 @@ jobs:
       - name: Make code accesible
         uses: actions/checkout@v2
       - name: GIT DIFF
-        uses: actions/action
+        uses: actions/Dockerfile
         id: git-diff
         with:
           PATTERNS: |
