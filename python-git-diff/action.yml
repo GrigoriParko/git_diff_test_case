@@ -20,6 +20,4 @@ runs:
   image: Dockerfile
   env:
     PATTERNS: ${{ inputs.PATTERNS }}
-    BASE: ${{ github.base_ref }}
-    HEAD: ${{ github.head_ref }}
-    PPDS_PY_DIR: ${{ github.workspace }}
+    HEAD: ${{ inputs.head_ref }}
