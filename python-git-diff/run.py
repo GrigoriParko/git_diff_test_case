@@ -13,6 +13,6 @@ git_context_json = json.loads(git_context)
 if __name__ == "__main__":
 
     subprocess.run(
-        f'echo "::debug::{str(git_context_json)}"',
+        f'echo "::debug::{git_context_json[:50]}"',
         shell=True,
     )
