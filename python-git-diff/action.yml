@@ -24,3 +24,4 @@ runs:
   image: Dockerfile
   env:
     PATTERNS: ${{ inputs.PATTERNS }}
+    GITHUB_CONTEXT: ${{ inputs.GITHUB_CONTEXT }}
