@@ -12,6 +12,6 @@ if __name__ == "__main__":
     """)
 
     subprocess.run(
-        f"echo {git_context}",
+        f"echo `{git_context}`",
         shell=True
     )
