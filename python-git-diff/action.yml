@@ -13,6 +13,9 @@ inputs:
   HEAD_REF:
     description: Github head ref
     required: true
+  BASE_REF:
+    description: Github base ref
+    required: true
 
 outputs:
   diff:
@@ -24,3 +27,4 @@ runs:
   env:
     PATTERNS: ${{ inputs.PATTERNS }}
     HEAD_REF: ${{ inputs.HEAD_REF }}
+    BASE_REF: ${{ inputs.BASE_REF }}
