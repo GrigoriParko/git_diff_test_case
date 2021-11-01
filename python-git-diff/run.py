@@ -1,11 +1,12 @@
 import os
 import subprocess
-import logging
+from io import StringIO
 import json
 
 
-git_context = os.getenv("GITHUB_CONTEXT")
-git_context_json = json.loads(git_context)
+git_context = os.getenv("GITHUB_CONTEXT", "")
+io = StringIO(git_context)
+git_context_json = json.load(io)
 context_type = type(git_context_json)
 
 if __name__ == "__main__":
