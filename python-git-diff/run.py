@@ -12,6 +12,6 @@ if __name__ == "__main__":
     GITHUB_BASE_REF: {base_ref}
     """)
     subprocess.run(
-        f"git diff --name-only `{base_ref}...{head_ref}`",
+        f"git diff --name-only `origin...master`",
         shell=True
     )
