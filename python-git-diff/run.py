@@ -8,7 +8,7 @@ IMPORTANT_CONTEXT_PARTS = ["ref", "default_branch"]
 
 context_dict = dict()
 for k in IMPORTANT_CONTEXT_PARTS:
-    k_match = re.match(f"{k}:\s(?P<{k}>.+?)(?=,)", git_context)
+    k_match = re.search(f"{k}:\s(?P<{k}>.+?)(?=,)", git_context)
     if k_match:
         context_dict[k] = k_match.groupdict()[k]
 
