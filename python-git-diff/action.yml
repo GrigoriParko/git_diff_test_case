@@ -10,11 +10,9 @@ inputs:
   PATTERNS:
     description: Target file pattern.
     required: false
-  HEAD_REF:
+  GITHUB_CONTEXT:
     description: Github head ref
-    required: true
-  BASE_REF:
-    description: Github base ref
+    default: ${{ toJSON(github) }}
     required: true
 
 outputs:
@@ -26,5 +24,3 @@ runs:
   image: Dockerfile
   env:
     PATTERNS: ${{ inputs.PATTERNS }}
-    HEAD_REF: ${{ inputs.HEAD_REF }}
-    BASE_REF: ${{ inputs.BASE_REF }}
