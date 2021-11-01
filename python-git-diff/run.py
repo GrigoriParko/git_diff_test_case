@@ -3,7 +3,8 @@ import subprocess
 import logging
 
 
-git_context = os.getenv("GITHUB_CONTEXT", )
+git_context = os.getenv("GITHUB_CONTEXT")
+# base_ref = git_context
 
 if __name__ == "__main__":
     logging.info(f"""
@@ -11,6 +12,6 @@ if __name__ == "__main__":
     """)
 
     subprocess.run(
-        f"git diff --name-only `{git_context}`",
+        f"echo {git_context}",
         shell=True
     )
