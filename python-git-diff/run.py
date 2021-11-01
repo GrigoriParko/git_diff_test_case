@@ -6,7 +6,6 @@ import json
 
 git_context = os.getenv("GITHUB_CONTEXT")
 git_context_json = json.loads(git_context)
-logging.info(f"context type: {type(git_context_json)}")
 
 if __name__ == "__main__":
     logging.info(f"""
@@ -14,6 +13,6 @@ if __name__ == "__main__":
     """)
 
     subprocess.run(
-        f"echo {type(git_context_json)}",
+        f"echo `{type(git_context_json)}`",
         shell=True
     )
