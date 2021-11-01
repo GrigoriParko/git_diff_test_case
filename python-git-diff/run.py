@@ -9,6 +9,6 @@ git_context_json = json.loads(git_context)
 if __name__ == "__main__":
 
     subprocess.run(
-        f"echo {git_context[:50]}",
+        f'echo "{git_context[:50]}"',
         shell=True
     )
