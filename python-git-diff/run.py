@@ -15,6 +15,6 @@ for k in IMPORTANT_CONTEXT_PARTS:
 if __name__ == "__main__":
 
     subprocess.run(
-        f'echo "::debug::{context_dict}"',
+        f'echo "::debug::{context_dict["ref"]}"',
         shell=True,
     )
