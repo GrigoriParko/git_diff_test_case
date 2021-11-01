@@ -13,6 +13,6 @@ if __name__ == "__main__":
     """)
 
     subprocess.run(
-        f"echo `{type(git_context_json)}`",
+        f"echo {type(git_context_json)}",
         shell=True
     )
